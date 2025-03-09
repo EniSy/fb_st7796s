@@ -23,7 +23,7 @@ KV=$1
 echo "$UN" | grep sunxi && LHEADERS=linux-headers-current-sunxi
 echo "$UN" | grep sunxi && OVL=armbian-add-overlay
 #workaround for kernel 5.10.76
-echo "$KV" | grep 5.10.76-sun50iw6 && LHEADERS=linux-headers-current-sun50iw6
+echo "$KV" | grep 6.1.31-sun50iw9 && LHEADERS=linux-headers-current-sunxi
 
 [ ! -z "$LHEADERS" ] || die "Unknown kernel architecture"
 
