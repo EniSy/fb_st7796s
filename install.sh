@@ -19,6 +19,8 @@ KV=$1
 [ ! -z "$KV" ] || KV=`uname -r`
 
 #armbian, https://www.armbian.com/orangepi3-lts/
+echo "$KV" | grep sun50iw9 && LHEADERS=linux-headers-next-sun50iw9
+echo "$KV" | grep sun50iw9 && OVL=orangepi-add-overlay
 
 echo "$UN" | grep sunxi && LHEADERS=linux-headers-current-sunxi
 echo "$UN" | grep sunxi && OVL=armbian-add-overlay
